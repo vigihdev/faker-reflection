@@ -45,9 +45,6 @@ final class FakerReflection implements FakerReflectionInterface
             }
         }
 
-        var_dump($reflection->getName());
-        var_dump($this->resultGenerators);
-
         return new Collection($this->resultGenerators);
     }
 }

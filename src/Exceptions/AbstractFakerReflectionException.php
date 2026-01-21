@@ -16,7 +16,7 @@ abstract class AbstractFakerReflectionException extends \Exception implements Fa
     public static function handleThrowable(
         Throwable|FakerReflectionExceptionInterface $e,
         array $context = [],
-        array $solutions
+        array $solutions = []
     ): self {
         $context = method_exists($e, 'getContext') && is_array($e->getContext()) ? $e->getContext() : $context;
         $solutions = method_exists($e, 'getSolutions') && is_array($e->getSolutions()) ? $e->getSolutions() : $solutions;
