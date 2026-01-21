@@ -18,7 +18,7 @@ final class StringProvider extends AbstractProvider
 
     public function generate(): string
     {
-        $value = strtolower($this->value);
+        $value = lcfirst($this->value);
 
         // Priority-based pattern matching
         $patterns = [
