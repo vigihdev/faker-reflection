@@ -1,0 +1,58 @@
+{
+    "name": "vigihdev/faker-reflection",
+    "description": "Faker reflection class library for PHP.",
+    "homepage": "https://github.com/vigihdev/faker-reflection",
+    "type": "library",
+    "keywords": [
+        "php",
+        "faker",
+        "reflection",
+        "input validation",
+        "custom validators"
+    ],
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "authors": [
+        {
+            "name": "Vigih Dev",
+            "email": "vigihdev@gmail.com",
+            "role": "developer"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://satis.id"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "symfony/filesystem": "^6.4",
+        "fakerphp/faker": "^1.23",
+        "vigihdev/support": "dev-main",
+        "vigihdev/symfony-bridge-config": "dev-main",
+        "fightbulc/moment": "^1.35",
+        "vigihdev/serializer": "dev-main"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "10.5.x-dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vigihdev\\FakerReflection\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Vigihdev\\FakerReflection\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "process-timeout": 0
+    },
+    "scripts": {
+        "test": "phpunit",
+        "dev": "php -S localhost:1232 local-dev/index.php"
+    }
+}
