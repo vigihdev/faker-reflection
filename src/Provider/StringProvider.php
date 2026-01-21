@@ -81,9 +81,11 @@ final class StringProvider extends AbstractProvider
             '/currency$/' => fn() => $this->faker->currencyCode(),
         ];
 
+        $patterns = array_merge($patterns, PatternBasedStringProvider::build($this->faker));
+
         foreach ($patterns as $pattern => $generator) {
             if (preg_match($pattern, $value)) {
-                return $generator();
+                return (string) $generator();
             }
         }
 

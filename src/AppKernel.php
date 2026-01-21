@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Vigihdev\FakerReflection;
 
+use Symfony\Component\Dotenv\Dotenv;
 use Symfony\Component\Filesystem\Path;
 use Vigihdev\FakerReflection\Exceptions\FakerReflectionException;
 use VigihDev\SymfonyBridge\Config\ConfigBridge;
@@ -35,6 +36,12 @@ final class AppKernel
         if (!defined('PROJECT_DIR')) {
             define('PROJECT_DIR', realpath($this->basepath));
         }
+
+        // Load env
+        $envDefaults = ['PROJECT_DIR' => realpath($this->basepath)];
+        $dotEnv = new Dotenv();
+        $dotEnv->usePutenv(true);
+        $dotEnv->populate($envDefaults, true);
 
         // boot container
         $container = ConfigBridge::boot(
