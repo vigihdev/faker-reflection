@@ -45,14 +45,15 @@ final class StringProvider extends AbstractProvider
             '/country/' => fn() => $this->faker->country(),
 
             // Phone patterns
-            '/phone/' => fn() => $this->faker->phoneNumber(),
+            '/phone|(contact)Value$/' => fn() => $this->faker->phoneNumber(),
             '/tel/' => fn() => $this->faker->phoneNumber(),
             '/mobile/' => fn() => $this->faker->phoneNumber(),
+            '/(contact)Type$/' => fn() => $this->faker->randomElement(['Phone', 'Mobile', 'House', 'Whatsapp']),
 
             // URL patterns
-            '/url/' => fn() => $this->faker->url(),
+            '/url|(action|button|home)Url$/' => fn() => $this->faker->url(),
             '/website/' => fn() => $this->faker->url(),
-            '/avatar/' => fn() => $this->faker->imageUrl(100, 100),
+            '/avatar|(icon)Url$/' => fn() => $this->faker->imageUrl(100, 100),
             '/image/' => fn() => $this->faker->imageUrl(),
 
             // Date patterns
