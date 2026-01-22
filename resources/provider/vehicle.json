@@ -25,5 +25,25 @@
         "Dropoff - Drop satu tujuan",
         "Pickup - Pickup satu tujuan",
         "Layanan - Banyak Tujuan"
+    ],
+    "warnaMobil": [
+        "Hitam Metalik",
+        "Putih Pearl",
+        "Merah Maroon",
+        "Silver Titan",
+        "Abu-abu Gunmetal",
+        "Biru Midnight",
+        "Hijau Army",
+        "Kuning Solar",
+        "Coklat Mocha",
+        "Merah Candy"
+    ],
+    "transmisi": [
+        "Manual 5 Percepatan",
+        "Otomatis 4 Percepatan",
+        "CVT (Continuously Variable Transmission)",
+        "Dual Clutch 7 Percepatan",
+        "Otomatis 6 Percepatan",
+        "e-CVT (Hybrid)"
     ]
 }
